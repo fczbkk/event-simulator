@@ -1,6 +1,6 @@
 {
   "name": "@fczbkk/event-simulator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Cross-browser simulator of regular and mouse events in JavaScript.",
   "repository": {
     "type": "git",
