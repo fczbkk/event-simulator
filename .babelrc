@@ -1,4 +1,16 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["transform-object-assign"]
+  "plugins": ["transform-object-assign"],
+  "env": {
+    "es5": {
+      "presets": ["env"]
+    },
+    "es6": {
+      "presets": [
+        ["env", {
+          "modules": false,
+          "loose": true
+        }]
+      ]
+    }
+  }
 }
