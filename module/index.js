@@ -1,13 +1,5 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-exports.simulateEvent = simulateEvent;
-exports.simulateMouseEvent = simulateMouseEvent;
 /**
  * Utility that checks whether provided object exists
  * @param {*} obj
@@ -70,7 +62,7 @@ function fireEvent(target_object, event, event_type) {
  * @example
  * simulateEvent(window, 'scroll');
  */
-function simulateEvent(target_object, event_type) {
+export function simulateEvent(target_object, event_type) {
   if (!exists(target_object)) {
     throw new TypeError('simulateEvent: target object must be defined');
   }
@@ -146,7 +138,7 @@ function setupMouseEvent(properties) {
  * @example
  * simulateMouseEvent(window, {type: 'mousedown', button: 'right'});
  */
-function simulateMouseEvent(target_object) {
+export function simulateMouseEvent(target_object) {
   var custom_properties = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   var properties = sanitizeProperties(custom_properties);
